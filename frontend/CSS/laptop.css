@@ -437,17 +437,75 @@ p {
 
 /* ****************************************************************************************************************************** */
 
-#loginModal {
-  display: none;
+/* Common Modal Styling */
+#loginModal,
+#signupModal {
+  display: none; /* Controlled via JS */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: red;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 25px;
+  background: #f9f9f9;
+  padding: 30px 40px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 300px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-#loginForm {
+
+/* Show login modal initially */
+#loginModal {
+  display: block;
+}
+
+/* Form Styling */
+form {
   display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* Button Styling */
+button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Switch Button Styling */
+#switchToSignup,
+#switchToLogin {
+  background: transparent;
+  color: #007bff;
+  text-decoration: underline;
+  margin-top: 10px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#switchToSignup:hover,
+#switchToLogin:hover {
+  color: #0056b3;
 }
